@@ -1548,3 +1548,19 @@ Error: socket hang up 19 : 13
 Error: socket hang up 19 : 13
 Error: socket hang up 19 : 13
 Error: socket hang up 19 : 13
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/playlist.m3u8 43 : 6
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/chunklist_w1643023674.m3u8 43 : 6
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/playlist.m3u8 43 : 8
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/chunklist_w1733429096.m3u8 43 : 8
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/playlist.m3u8 45 : 24
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/chunklist_w1665698065.m3u8 45 : 24
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/playlist.m3u8 45 : 43
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/chunklist_w1778876855.m3u8 45 : 43
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/playlist.m3u8 4 : 43
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/chunklist_w226001806.m3u8 4 : 43
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/playlist.m3u8 5 : 18
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/chunklist_w535169991.m3u8 5 : 18
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/playlist.m3u8 5 : 32
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/chunklist_w138256177.m3u8 5 : 32
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/playlist.m3u8 5 : 53
+200 http://192.168.0.124:1935/vod/mp4:sample.mp4/chunklist_w963196911.m3u8 5 : 53

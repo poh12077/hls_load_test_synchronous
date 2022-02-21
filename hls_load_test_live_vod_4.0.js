@@ -94,7 +94,12 @@ let request_second_m3u8 = (url) =>
             }
           //startInterval(branch, request_ts_vod, 1000, 'immediate');
             //branch_all_together(request_ts_vod);
-            request_ts_vod_no_async();
+           // request_ts_vod_no_async_1();
+
+            for (let i=0;i<buffer.length*50;i++)
+            {
+              request_ts_vod_no_async_2();
+            }
        }
        else
        {
@@ -280,7 +285,7 @@ let logger = (url, id) =>
     
 }
 
-let request_ts_vod_no_async = () =>
+let request_ts_vod_no_async_1 = () =>
 {
   let j=0;
 
@@ -289,7 +294,7 @@ let request_ts_vod_no_async = () =>
         axios.get( buffer[ i ] )
         .then( (response) => 
         {
-            console.log(response.status + " " + response.config.url );
+            //console.log(response.status + " " + response.config.url );
            // logger(response.status + " " + response.config.url);
         })
         .catch( (error) => {
@@ -307,8 +312,40 @@ let request_ts_vod_no_async = () =>
             }
         }
     }
-    console.log('end');
+   // console.log('end');
 }
+
+let u=0;
+
+let request_ts_vod_no_async_2 = () =>
+{
+ // let j=0;
+
+        axios.get( buffer[ u ] )
+        .then( (response) => 
+        {
+            console.log(response.status + " " + response.config.url );
+           // logger(response.status + " " + response.config.url);
+        })
+        .catch( (error) => {
+          console.log( error);
+          logger(error);
+        });
+       
+        u++;
+
+        if(u==buffer.length-1)
+        {
+            u=0;
+            // j++;
+            // if(j==100)
+            // {
+            //   break;
+            // }
+        }
+   // console.log('end');
+}
+
 
 
 request_first_m3u8(base_url);
