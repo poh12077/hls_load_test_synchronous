@@ -7,6 +7,8 @@ const { start } = require('repl');
 //const base_url = 'http://192.168.0.124:1935/live/nana/playlist.m3u8';   //live   
 const base_url = 'http://192.168.0.124:1935/vod/mp4:sample.mp4/playlist.m3u8';   //vod
 
+let m=5;
+
 let buffer=[];
 let ts_duration = 15000;
 let load=15;
@@ -94,12 +96,12 @@ let request_second_m3u8 = (url) =>
             }
           //startInterval(branch, request_ts_vod, 1000, 'immediate');
             //branch_all_together(request_ts_vod);
-           // request_ts_vod_no_async_1();
+            request_ts_vod_no_async_1();
 
-            for (let i=0;i<buffer.length*50;i++)
-            {
-              request_ts_vod_no_async_2();
-            }
+            // for (let i=0;i<buffer.length*m;i++)
+            // {
+            //   request_ts_vod_no_async_2();
+            // }
        }
        else
        {
@@ -294,7 +296,7 @@ let request_ts_vod_no_async_1 = () =>
         axios.get( buffer[ i ] )
         .then( (response) => 
         {
-            //console.log(response.status + " " + response.config.url );
+            console.log(response.status + " " + response.config.url );
            // logger(response.status + " " + response.config.url);
         })
         .catch( (error) => {
@@ -306,7 +308,7 @@ let request_ts_vod_no_async_1 = () =>
         {
             i=0;
             j++;
-            if(j==100)
+            if(j==m)
             {
               break;
             }
@@ -319,8 +321,6 @@ let u=0;
 
 let request_ts_vod_no_async_2 = () =>
 {
- // let j=0;
-
         axios.get( buffer[ u ] )
         .then( (response) => 
         {
